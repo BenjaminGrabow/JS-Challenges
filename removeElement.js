@@ -57,3 +57,6 @@ var removeElement = function(nums, val) {
 };
 
 // like bubble sorting
+// use in-place algorithm:
+// in-place algorithm is an algorithm which transforms 
+//input using no auxiliary data structure.
