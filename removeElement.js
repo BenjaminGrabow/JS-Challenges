@@ -43,14 +43,17 @@
  * @return {number}
  */
 var removeElement = function(nums, val) {
-  let swapIndicator = false;
+  let numberOfRemovedElements = 0;
   for(let i = 0; i < nums.length; i++) {
     if(nums[i] === val) {
-      swapIndicator = true;
-    } else if (swapIndicator) {
-      let temp = nums[i - 1];
-      nums[i - 1] = nums[i];
-      nums[i] = temp; 
+      numberOfRemovedElements++;
+    } else if (numberOfRemovedElements !== 0) {
+      nums[i - numberOfRemovedElements] = nums[i];
+      nums[i] = nums[i - numberOfRemovedElements]; 
     }
   }
+
+  return nums.length - numberOfRemovedElements;
 };
+
+// like bubble sorting
