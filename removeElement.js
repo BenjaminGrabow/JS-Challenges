@@ -37,3 +37,20 @@
 //     print(nums[i]);
 // }
 
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+  let swapIndicator = false;
+  for(let i = 0; i < nums.length; i++) {
+    if(nums[i] === val) {
+      swapIndicator = true;
+    } else if (swapIndicator) {
+      let temp = nums[i - 1];
+      nums[i - 1] = nums[i];
+      nums[i] = temp; 
+    }
+  }
+};
