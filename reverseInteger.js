@@ -44,3 +44,5 @@ var reverse = function(x) {
   };
 // check if negative number
 
+
+// * math.sign(value) // adds minus if minus is available
