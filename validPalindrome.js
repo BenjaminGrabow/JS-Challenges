@@ -36,3 +36,15 @@ var isPalindrome = function(s) {
       if(joinNorm === joinRev) return true;
       else return false;
   };
+
+  // One of the best 
+
+  var isPalindrome = function(s) {
+    s = s.toLowerCase().replace(/[^a-z0-9]/gi, '')
+    let beg = 0, end = s.length - 1
+    while (beg <= end) {
+        if (s[beg++] != s[end--])
+            return false
+    }
+    return true
+};
