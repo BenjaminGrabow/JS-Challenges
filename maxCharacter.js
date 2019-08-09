@@ -1,5 +1,5 @@
 const maxCharacter = (s) => {
-   let charMap = {};
+   const charMap = {};
    let maxNumber = 0;
    let maxChar = '';
 
