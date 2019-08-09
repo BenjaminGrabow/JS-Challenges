@@ -26,7 +26,21 @@
  * @return {number}
  */
 var reverse = function(x) {
-
-};
+  if(x < 0) {
+      let result = x.toString().split('').reverse('');
+      result.pop();
+      result.unshift('-');
+      result = Number(result.join(''));
+    
+      if(result < -2147483647) return 0;
+      else return result;
+      
+  } else {
+    let result = parseInt(x.toString().split('').reverse('').join(''));
+  
+  if( result > 2147483647) return 0;
+  else return result;
+  }
+  };
 // check if negative number
 
