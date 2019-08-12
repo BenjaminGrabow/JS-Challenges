@@ -16,6 +16,8 @@ const capitalLetters = (s) => {
   // regular expression
 
   return s.replace(/\b[a-z]/gi, (char) => char.toUpperCase());
+  //g for all words 
+  //i case sensitive
 };
 
 capitalLetters('hello bye yeah');
