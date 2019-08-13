@@ -8,3 +8,24 @@
 // Follow up:
 
 // If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function(nums) {
+  let sum = nums[0];
+  let max = nums[0];
+  
+  for(let i = 1; i < nums.length; i++) {
+      sum = Math.max(sum + nums[i], nums[i]);
+      max = Math.max(max, sum);
+
+      console.log(nums[i],sum, max)
+  }
+  
+  return max;
+};
+
+
+// Try with reduce !
