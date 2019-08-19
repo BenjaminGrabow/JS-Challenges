@@ -48,3 +48,6 @@ var lengthOfLastWord = function(s) {
   let words = s.split(' ').filter(str => str);
   return words.length ? words[words.length-1].length : 0;
 };
+
+// best solution 
+var lengthOfLastWord_v5 = s => s.trim().split(' ').reverse().shift().length;
