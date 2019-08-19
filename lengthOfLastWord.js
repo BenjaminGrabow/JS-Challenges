@@ -40,3 +40,11 @@ var lengthOfLastWord = function(s) {
   if(result[0])return result[result.length - 1].length;
   else return 0;
 };
+
+
+//Solution with array higher order function filter
+
+var lengthOfLastWord = function(s) {
+  let words = s.split(' ').filter(str => str);
+  return words.length ? words[words.length-1].length : 0;
+};
