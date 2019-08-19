@@ -8,4 +8,35 @@
 
 // Input: "Hello World"
 // Output: 5
- 
+
+
+// For loop solution
+
+var lengthOfLastWord = function(s) {
+  if(!s) return 0; 
+  const split = s.split(' ');
+  let result = [];
+  for(let i = 0;
+     i < split.length; i++){
+      if(split[i].match(/[a-zA-Z]/g)) {
+          result.push(split[i]);
+      }
+  }
+  if(result[0])return result[result.length - 1].length;
+  else return 0;
+};
+
+// Solution with array higher order function mao
+
+var lengthOfLastWord = function(s) {
+  if(!s) return 0; 
+  const split = s.split(' ');
+  let result = [];
+  split.map(nums => {
+        if(nums.match(/[a-zA-Z]/g)) {
+          result.push(nums);
+      } return nums;
+  })
+  if(result[0])return result[result.length - 1].length;
+  else return 0;
+};
