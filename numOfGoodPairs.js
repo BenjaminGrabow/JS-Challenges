@@ -15,3 +15,21 @@ var numIdenticalPairs = function (nums) {
   }
   return good_pairs;
 };
+
+// better solution, time complexity O(n)
+var numIdenticalPairs = function (nums) {
+  let good_pairs = 0;
+
+  const trackNumsObject = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    if (trackNumsObject[nums[i]]) {
+      good_pairs += trackNumsObject[nums[i]];
+      trackNumsObject[nums[i]] += 1;
+    } else {
+      trackNumsObject[nums[i]] = 1;
+    }
+  }
+
+  return good_pairs;
+};
