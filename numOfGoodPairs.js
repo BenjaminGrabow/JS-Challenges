@@ -5,7 +5,7 @@
  * @return {number}
  */
 var numIdenticalPairs = function (nums) {
-  // Brute force solution
+  // Brute force solution, time complexity O(n^2)
   let good_pairs = 0;
 
   for (let i = 0; i < nums.length; i++) {
